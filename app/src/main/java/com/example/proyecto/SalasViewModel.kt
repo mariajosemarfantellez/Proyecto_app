@@ -13,21 +13,15 @@ class SalasViewModel(application: Application) : AndroidViewModel(application) {
     val contexto = application.baseContext
 
     init {
-        //Inicializamos el archivo con estos contactos
-        /*rooms.add(Rooms("Frontend Team","1234"))
+        //Inicializamos el archivo con estas salas
+       /* rooms.add(Rooms("Frontend Team","1234"))
         rooms.add(Rooms("Devops Team","5678"))
         rooms.add(Rooms("Another Project","1010"))
         rooms.add(Rooms("Super Team","0000"))
-        /*contactos.add(Contactos("Abuelo","950893564"))
-        contactos.add(Contactos("Lucia","945672313"))
-        contactos.add(Contactos("Papa","967761221"))
-        contactos.add(Contactos("Antonia","976894532"))
-        contactos.add(Contactos("Natalia","956763345"))*/
-        Escritura(rooms,"room_222.txt")*/
-        //Escritura_delete()
-        //Escritura(delete_rooms_2,"delete_22.txt")
+        Escritura(rooms,"room_10.txt")
+        Escritura(delete_rooms_2,"delete_10.txt")*/
 
-        delete()
+        rooms = delete()
         myCases.postValue(rooms)
         //myCases.remove
         /*val gson = Gson()
@@ -50,9 +44,9 @@ class SalasViewModel(application: Application) : AndroidViewModel(application) {
         }*/
 
     }
-    fun delete(){
-        rooms = Leer(contexto, "room_222.txt")
-        delete_rooms_2 = Leer(contexto, "delete_22.txt")
+    fun delete(): MutableList<Rooms>{
+        rooms = Leer(contexto, "room_10.txt")
+        delete_rooms_2 = Leer(contexto, "delete_10.txt")
         if(delete_rooms_2.size>0){
             for (i in 0..delete_rooms_2.size-1){
                 for(j in 0..rooms.size-1){
@@ -62,6 +56,7 @@ class SalasViewModel(application: Application) : AndroidViewModel(application) {
                 }
             }
         }
+        return rooms
 
     }
     fun Escritura(list: MutableList<Rooms>, filename: String){

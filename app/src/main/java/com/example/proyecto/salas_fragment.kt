@@ -47,7 +47,7 @@ class salas_fragment : Fragment(), OnClickListener {
             val name = bundle.getString("name")
             val password = bundle.getString("password")
             viewModel.rooms.add(Rooms(name,password))
-            viewModel.Escritura(viewModel.rooms,"room_222.txt")
+            viewModel.Escritura(viewModel.rooms,"room_10.txt")
 
         }
         setFragmentResultListener("requestKey_2") { requestKey, bundle ->
@@ -55,9 +55,10 @@ class salas_fragment : Fragment(), OnClickListener {
             val password = bundle.getString("password")
             val position = bundle.getInt("position")
             viewModel.delete_rooms_2.add(Rooms(name,password))
-            viewModel.Escritura(viewModel.delete_rooms_2, "delete_22.txt")
-            adapter.set(viewModel.rooms, position)
-            viewModel.delete()
+            viewModel.Escritura(viewModel.delete_rooms_2, "delete_10.txt")
+            //adapter.set(viewModel.rooms, position)
+            viewModel.rooms = viewModel.delete()
+            viewModel.myCases.postValue(viewModel.rooms)
 
         }
         return view
