@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Proyecto</string>
+    <string name="Login">LOGIN</string>
+    <string name="email">EMAIL</string>
+    <string name="password">PASSWORD</string>
+    <string name="B_login">LOGIN</string>
+    <string name="forgot">forgot password?</string>
+    <string name="signin"><u>SIGN IN</u></string>
+    <string name="navigation_top">Planning Poker</string>
+    <string name="deck">Deck</string>
+    <string name="mundo">Salas</string>
+    <string name="ajuste">Ajustes</string>
+    <string name="baraja">Baraja</string>
+    <string name="createroom">Create Room</string>
+    <string name="joinroom">Join Room</string>
+    <string-array name="deck_options">
+        <item>Standard</item>
+        <item>T-Shirt</item>
+        <item>Fibonacci</item>
+        <item>Hours</item>
+    </string-array>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

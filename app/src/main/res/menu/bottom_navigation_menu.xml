@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/image_baraja"
+        android:enabled="true"
+        android:icon="@drawable/baraja"
+        android:title="@string/baraja">
+
+    </item>
+
+    <item
+        android:id="@+id/image_salas"
+        android:enabled="true"
+        android:icon="@drawable/mundo"
+        android:title="@string/mundo">
+
+    </item>
+
+    <item
+        android:id="@+id/image_ajuste"
+        android:enabled="true"
+        android:icon="@drawable/ajuste"
+        android:title="@string/ajuste">
+
+    </item>
+</menu>
