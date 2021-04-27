@@ -14,16 +14,19 @@ class SalasViewModel(application: Application) : AndroidViewModel(application) {
 
     init {
         //Inicializamos el archivo con estas salas
-       /* rooms.add(Rooms("Frontend Team","1234"))
+        /*rooms.add(Rooms("Frontend Team","1234"))
         rooms.add(Rooms("Devops Team","5678"))
         rooms.add(Rooms("Another Project","1010"))
         rooms.add(Rooms("Super Team","0000"))
-        Escritura(rooms,"room_10.txt")
-        Escritura(delete_rooms_2,"delete_10.txt")*/
+        Escritura(rooms,"room_18.txt")
+        Escritura(delete_rooms_2,"delete_18.txt")
+        rooms.add(Rooms(",",""))*/
 
-        rooms = delete()
+        //rooms = delete()
+        rooms = Leer(contexto, "room_18.txt")
         myCases.postValue(rooms)
         //myCases.remove
+
         /*val gson = Gson()
             val fileName = "contacts.json"
             val file = application.assets.open(fileName).bufferedReader()
@@ -45,8 +48,8 @@ class SalasViewModel(application: Application) : AndroidViewModel(application) {
 
     }
     fun delete(): MutableList<Rooms>{
-        rooms = Leer(contexto, "room_10.txt")
-        delete_rooms_2 = Leer(contexto, "delete_10.txt")
+        rooms = Leer(contexto, "room_18.txt")
+        delete_rooms_2 = Leer(contexto, "delete_18.txt")
         if(delete_rooms_2.size>0){
             for (i in 0..delete_rooms_2.size-1){
                 for(j in 0..rooms.size-1){

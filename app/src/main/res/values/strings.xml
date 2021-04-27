@@ -13,7 +13,13 @@
     <string name="baraja">Baraja</string>
     <string name="createroom">Create Room</string>
     <string name="joinroom">Join Room</string>
+    <string name="baraja_view">NUMERO</string>
+    <string name="name_room">NAME</string>
+    <string name="password_room">PASSWORD</string>
+    <string name="save_room">SAVE</string>
+    <string name="delete_room">DELETE</string>
     <string-array name="deck_options">
+        <item>MAZOS</item>
         <item>Standard</item>
         <item>T-Shirt</item>
         <item>Fibonacci</item>

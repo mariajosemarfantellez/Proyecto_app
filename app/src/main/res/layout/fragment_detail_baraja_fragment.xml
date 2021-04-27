@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".detail_baraja_fragment">
+
+    <LinearLayout
+        android:id="@+id/linear_detail_baraja"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_gravity="center"
+        android:background="@color/fondo_login">
+        <TextView
+            android:id="@+id/text_detail_baraja"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/fondo2"
+            android:textSize="50sp">
+
+        </TextView>
+    </LinearLayout>
+</FrameLayout>

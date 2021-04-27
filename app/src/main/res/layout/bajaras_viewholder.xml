@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="50dp"
+    android:layout_height="80dp"
+    android:layout_marginStart="50dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
+    <GridLayout
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="30dp"
+
+        android:layout_marginBottom="30dp"
+        android:background="@color/fondo_login"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -15,14 +19,15 @@
         app:layout_constraintVertical_bias="0.39">
 
         <TextView
-            android:id="@+id/text_sala_name"
+            android:id="@+id/text_baraja"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="@string/name_room">
+            android:layout_gravity="center"
+            android:textColor="@color/fondo2"
+            android:text="@string/baraja_view">
 
         </TextView>
 
-
-    </LinearLayout>
+    </GridLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

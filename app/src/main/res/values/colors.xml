@@ -11,5 +11,6 @@
     <color name="fondo">#99EBAE</color>
     <color name="login">#5440FF</color>
     <color name="fondo2">#004445</color>
-    <color name="fondo_login">#99EBAE</color>
+    <color name="fondo_login">#DBF5DF</color>
+
 </resources>

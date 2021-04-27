@@ -30,6 +30,10 @@ class salas_fragment : Fragment(), OnClickListener {
         viewModel.myCases.observe(viewLifecycleOwner, Observer {
             adapter.set(it, -1)
         })
+        /*viewModel.rooms = viewModel.delete()
+        for(i in viewModel.rooms){
+            adapter.addItem(i)
+        }*/
 
         val button = view.findViewById<Button>(R.id.button_create)
         button.setOnClickListener {
@@ -47,7 +51,8 @@ class salas_fragment : Fragment(), OnClickListener {
             val name = bundle.getString("name")
             val password = bundle.getString("password")
             viewModel.rooms.add(Rooms(name,password))
-            viewModel.Escritura(viewModel.rooms,"room_10.txt")
+            viewModel.Escritura(viewModel.rooms,"room_18.txt")
+            //adapter.addItem(Rooms(name,password))
 
         }
         setFragmentResultListener("requestKey_2") { requestKey, bundle ->
@@ -55,9 +60,10 @@ class salas_fragment : Fragment(), OnClickListener {
             val password = bundle.getString("password")
             val position = bundle.getInt("position")
             viewModel.delete_rooms_2.add(Rooms(name,password))
-            viewModel.Escritura(viewModel.delete_rooms_2, "delete_10.txt")
+            viewModel.Escritura(viewModel.delete_rooms_2, "delete_18.txt")
             //adapter.set(viewModel.rooms, position)
-            viewModel.rooms = viewModel.delete()
+            //viewModel.rooms = viewModel.delete()
+            //adapter.removeItem(position)
             viewModel.myCases.postValue(viewModel.rooms)
 
         }

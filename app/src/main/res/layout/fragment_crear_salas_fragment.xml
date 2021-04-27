@@ -14,13 +14,13 @@
             android:id="@+id/new_room_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="NAME"
+            android:hint="@string/name_room"
             android:inputType="text"></EditText>
         <EditText
             android:id="@+id/new_room_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="PASSWORD"
+            android:hint="@string/password_room"
             android:inputType="textPassword"></EditText>
         <Button
             android:id="@+id/button_guardar"
@@ -29,7 +29,7 @@
             android:layout_gravity="center"
             android:backgroundTint="@color/fondo"
             android:textColor="@color/fondo2"
-            android:text="SAVE">
+            android:text="@string/save_room">
 
         </Button>
     </LinearLayout>

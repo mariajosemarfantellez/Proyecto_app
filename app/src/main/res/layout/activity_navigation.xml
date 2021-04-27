@@ -23,7 +23,7 @@
             android:layout_height="50dip"
             android:layout_marginLeft="5px"
             android:layout_marginRight="5px"
-            android:background="@color/fondo_login"
+            android:background="@color/fondo"
             android:gravity="start|center_vertical"
             android:text="@string/navigation_top"
             android:textColor="@color/fondo2">
