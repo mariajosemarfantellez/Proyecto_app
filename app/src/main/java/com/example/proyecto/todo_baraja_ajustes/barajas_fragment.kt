@@ -54,7 +54,6 @@ class barajas_fragment() : Fragment(), OnClickListener {
                     return 3
                 }
                 else if(baraja == viewModel.Fibonacci){
-
                     return 5
                 }
                 if (position % 3 == 0){

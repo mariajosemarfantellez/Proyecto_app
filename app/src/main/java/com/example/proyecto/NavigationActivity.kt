@@ -8,8 +8,7 @@ import com.example.proyecto.todo_baraja_ajustes.barajas_fragment
 import com.example.proyecto.todo_salas.salas_fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class NavigationActivity() : AppCompatActivity(), ChangeBaraja {
-    private var baraja_change = 1
+class NavigationActivity() : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -52,11 +51,6 @@ class NavigationActivity() : AppCompatActivity(), ChangeBaraja {
 
     }
 
-    override fun change(item: Int): Int {
-        baraja_change = item
-
-        return baraja_change
-    }
 }
 
 
