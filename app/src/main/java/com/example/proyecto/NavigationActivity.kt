@@ -15,14 +15,7 @@ class NavigationActivity() : AppCompatActivity(), ChangeBaraja {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_navigation)
 
-        //this.supportFragmentManager?.commit {
-          //  this.replace(R.id.fragment_container,barajas_fragment(baraja_change))
-          //  this.addToBackStack(null)
-        //}
         supportFragmentManager.beginTransaction().apply{
-            val bundle = Bundle()
-            bundle.putInt("position_2", baraja_change)
-            barajas_fragment().arguments = bundle
             replace(R.id.fragment_container, barajas_fragment())
             commit()
         }
@@ -32,16 +25,9 @@ class NavigationActivity() : AppCompatActivity(), ChangeBaraja {
             when(it.itemId) {
                 R.id.image_baraja -> {
                     supportFragmentManager.beginTransaction().apply{
-                        //val bundle = Bundle()
-                        //bundle.putInt("position_2", baraja_change)
-                        //barajas_fragment().arguments = bundle
                         replace(R.id.fragment_container, barajas_fragment())
                         commit()
                     }
-                    //this.supportFragmentManager?.commit {
-                      //  this.replace(R.id.fragment_container,barajas_fragment(baraja_change))
-                      //  this.addToBackStack(null)
-                    //}
                     true
                 }
                 R.id.image_salas -> {

@@ -49,19 +49,7 @@ class RecycleViewAdapterRooms(override val onClickListener: OnClickListener):
                 data.add(i)
             }
         }
-        /*if(pos != -1){
-            removeItem(pos)
-        }*/
-        //this.data = cases
         this.notifyDataSetChanged()
     }
 
-    fun removeItem(position :Int){
-        data.removeAt(position)
-        this.notifyItemRemoved(position)
-    }
-    fun restoreItem(item : Rooms, position: Int){
-        data.add(item)
-        this.notifyItemInserted(position)
-    }
 }

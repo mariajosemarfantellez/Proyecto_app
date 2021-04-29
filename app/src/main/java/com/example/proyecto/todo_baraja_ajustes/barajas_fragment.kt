@@ -23,31 +23,15 @@ class barajas_fragment() : Fragment(), OnClickListener {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
+
         val view = inflater.inflate(R.layout.fragment_barajas_fragment, container, false)
 
-        //val baraja_change = arguments?.getInt("position_2")
 
         lateinit var baraja : List<String>
         adapter = RecycleViewAdapterBaraja(this)
         recyclerView = view.findViewById<RecyclerView>(R.id.recycler_view)
         recyclerView.adapter = adapter
 
-        /*if (baraja_change == 1){
-            baraja = viewModel.Standard
-        }
-        else if (baraja_change == 2){
-            baraja = viewModel.T_Shirt
-        }
-        else if (baraja_change == 3){
-            baraja = viewModel.Fibonacci
-        }
-        else if (baraja_change == 4){
-            baraja = viewModel.Hours
-        }
-        else{
-            baraja = viewModel.Standard
-        }*/
         if (viewModel.posicion == 1){
             baraja = viewModel.Standard
         }
@@ -63,9 +47,16 @@ class barajas_fragment() : Fragment(), OnClickListener {
         else{
             baraja = viewModel.Standard
         }
-        recyclerView.layoutManager = GridLayoutManager(activity, baraja.size,  GridLayoutManager.VERTICAL, false)
+        recyclerView.layoutManager = GridLayoutManager(activity, baraja.size+1,  GridLayoutManager.VERTICAL, false)
         (recyclerView.layoutManager as GridLayoutManager).setSpanSizeLookup(object : SpanSizeLookup() {
             override fun getSpanSize(position: Int): Int {
+                if(baraja == viewModel.T_Shirt){
+                    return 3
+                }
+                else if(baraja == viewModel.Fibonacci){
+
+                    return 5
+                }
                 if (position % 3 == 0){
                     return 4
                 }
@@ -76,35 +67,7 @@ class barajas_fragment() : Fragment(), OnClickListener {
         for(i in baraja){
             adapter.addItem(i)
         }
-        /*setFragmentResultListener("requestKey_4") { requestKey, bundle ->
-            val position = bundle.getInt("position")
 
-            if (position == 0){
-                baraja = viewModel.Standard
-            }
-            if (position == 1){
-                baraja = viewModel.T_Shirt
-            }
-            if (position == 2){
-                baraja = viewModel.Fibonacci
-            }
-            if (position == 3){
-                baraja = viewModel.Hours
-            }
-            recyclerView.layoutManager = GridLayoutManager(activity, baraja.size,  GridLayoutManager.VERTICAL, false)
-            (recyclerView.layoutManager as GridLayoutManager).setSpanSizeLookup(object : SpanSizeLookup() {
-                override fun getSpanSize(position: Int): Int {
-                    if (position % 3 == 0){
-                        return 4
-                    }
-                    return 4
-                }
-            })
-            recyclerView.setLayoutManager(recyclerView.layoutManager)
-            for(i in baraja){
-                adapter.addItem(i)
-            }
-        }*/
 
         return view
     }

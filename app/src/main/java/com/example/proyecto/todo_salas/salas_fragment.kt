@@ -18,7 +18,7 @@ class salas_fragment : Fragment(), OnClickListener {
 
     lateinit var recyclerView: RecyclerView
     lateinit var adapter: RecycleViewAdapterRooms
-    private val viewModel: SalasViewModel by viewModels()
+    private val viewModel: SalasViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -32,10 +32,7 @@ class salas_fragment : Fragment(), OnClickListener {
         viewModel.myCases.observe(viewLifecycleOwner, Observer {
             adapter.set(it, -1)
         })
-        /*viewModel.rooms = viewModel.delete()
-        for(i in viewModel.rooms){
-            adapter.addItem(i)
-        }*/
+
 
         val button = view.findViewById<Button>(R.id.button_create)
         button.setOnClickListener {
@@ -54,27 +51,15 @@ class salas_fragment : Fragment(), OnClickListener {
             val password = bundle.getString("password")
             viewModel.rooms.add(Rooms(name,password))
             viewModel.Escritura(viewModel.rooms,"room_18.txt")
-            //adapter.addItem(Rooms(name,password))
 
         }
-        setFragmentResultListener("requestKey_2") { requestKey, bundle ->
-            val name = bundle.getString("name")
-            val password = bundle.getString("password")
-            val position = bundle.getInt("position")
-            viewModel.delete_rooms_2.add(Rooms(name,password))
-            viewModel.Escritura(viewModel.delete_rooms_2, "delete_18.txt")
-            //adapter.set(viewModel.rooms, position)
-            //viewModel.rooms = viewModel.delete()
-            //adapter.removeItem(position)
-            viewModel.myCases.postValue(viewModel.rooms)
 
-        }
         return view
     }
 
     override fun onClickItem(item: Any) {
         if(item is Rooms){
-            setFragmentResult("requestKey_1", bundleOf("name" to item.name, "password" to item.password, "position" to adapter.data.indexOf(item)) )
+            setFragmentResult("requestKey_1", bundleOf("room" to item, "name" to item.name) )
             activity?.supportFragmentManager?.commit {
                 this.replace(R.id.fragment_container, delete_rooms_fragment())
                 this.addToBackStack(null)
