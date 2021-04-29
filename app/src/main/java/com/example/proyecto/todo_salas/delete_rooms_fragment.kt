@@ -1,4 +1,4 @@
-package com.example.proyecto
+package com.example.proyecto.todo_salas
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -11,6 +11,7 @@ import androidx.core.os.bundleOf
 import androidx.fragment.app.commit
 import androidx.fragment.app.setFragmentResult
 import androidx.fragment.app.setFragmentResultListener
+import com.example.proyecto.R
 
 
 class delete_rooms_fragment : Fragment() {
@@ -30,7 +31,7 @@ class delete_rooms_fragment : Fragment() {
             button.setOnClickListener(){
                 setFragmentResult("requestKey_2", bundleOf("name" to name, "password" to password, "position" to position) )
                 activity?.supportFragmentManager?.commit {
-                    this.replace(R.id.fragment_container,salas_fragment())
+                    this.replace(R.id.fragment_container, salas_fragment())
                     this.addToBackStack(null)
                 }
                 //activity?.supportFragmentManager?.popBackStack()

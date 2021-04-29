@@ -1,4 +1,4 @@
-package com.example.proyecto
+package com.example.proyecto.todo_salas
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -9,6 +9,7 @@ import android.widget.Button
 import android.widget.EditText
 import androidx.core.os.bundleOf
 import androidx.fragment.app.setFragmentResult
+import com.example.proyecto.R
 
 
 class crear_salas_fragment : Fragment() {

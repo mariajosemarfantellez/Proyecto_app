@@ -1,4 +1,4 @@
-package com.example.proyecto
+package com.example.proyecto.todo_salas
 
 import android.app.Application
 import android.content.Context

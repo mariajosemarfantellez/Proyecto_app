@@ -1,10 +1,13 @@
-package com.example.proyecto
+package com.example.proyecto.todo_salas
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.proyecto.IAdapterView
+import com.example.proyecto.OnClickListener
+import com.example.proyecto.R
 
 class RecycleViewAdapterRooms(override val onClickListener: OnClickListener):
         RecyclerView.Adapter<RecycleViewAdapterRooms.ClassViewHolder>(), IAdapterView {

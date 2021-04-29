@@ -1,7 +1,6 @@
-package com.example.proyecto
+package com.example.proyecto.todo_baraja_ajustes
 
 import android.os.Bundle
-import android.text.TextUtils.replace
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,16 +8,15 @@ import android.widget.Adapter
 import android.widget.AdapterView
 import android.widget.AdapterView.OnItemSelectedListener
 import android.widget.Spinner
-import androidx.core.os.bundleOf
-import androidx.fragment.app.Fragment
-import androidx.fragment.app.commit
-import androidx.fragment.app.setFragmentResult
-import androidx.fragment.app.viewModels
+import androidx.fragment.app.*
+import com.example.proyecto.NavigationActivity
+import com.example.proyecto.R
 
 class ajustes_fragment() : Fragment() {
-    private val viewModel: AjustesViewModel by viewModels()
+    //private val viewModel: AjustesViewModel by viewModels()
     lateinit var adapter : AdapterView<Adapter>
     //lateinit var navigationActivity: NavigationActivity
+    private val viewModel: BarajaViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -40,10 +38,10 @@ class ajustes_fragment() : Fragment() {
                 if(pos!=0){
                     val bundle = Bundle()
                     bundle.putInt("position_2", pos)
-                    barajas_fragment(pos).arguments = bundle
-
+                    barajas_fragment().arguments = bundle
+                    viewModel.posicion = pos
                     activity?.supportFragmentManager?.commit {
-                        this.replace(R.id.fragment_container,barajas_fragment(pos))
+                        this.replace(R.id.fragment_container, barajas_fragment())
                         this.addToBackStack(null)
                     }
                     //activity?.supportFragmentManager?.popBackStack()

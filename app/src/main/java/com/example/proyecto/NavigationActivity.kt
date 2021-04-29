@@ -2,14 +2,11 @@ package com.example.proyecto
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.MenuItem
-import android.widget.Button
-import android.widget.ImageButton
-import android.widget.ImageView
-import androidx.fragment.app.add
 import androidx.fragment.app.commit
+import com.example.proyecto.todo_baraja_ajustes.ajustes_fragment
+import com.example.proyecto.todo_baraja_ajustes.barajas_fragment
+import com.example.proyecto.todo_salas.salas_fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.google.android.material.internal.ContextUtils.getActivity
 
 class NavigationActivity() : AppCompatActivity(), ChangeBaraja {
     private var baraja_change = 1
@@ -25,8 +22,8 @@ class NavigationActivity() : AppCompatActivity(), ChangeBaraja {
         supportFragmentManager.beginTransaction().apply{
             val bundle = Bundle()
             bundle.putInt("position_2", baraja_change)
-            barajas_fragment(baraja_change).arguments = bundle
-            replace(R.id.fragment_container, barajas_fragment(baraja_change))
+            barajas_fragment().arguments = bundle
+            replace(R.id.fragment_container, barajas_fragment())
             commit()
         }
 
@@ -38,7 +35,7 @@ class NavigationActivity() : AppCompatActivity(), ChangeBaraja {
                         //val bundle = Bundle()
                         //bundle.putInt("position_2", baraja_change)
                         //barajas_fragment().arguments = bundle
-                        replace(R.id.fragment_container, barajas_fragment(baraja_change))
+                        replace(R.id.fragment_container, barajas_fragment())
                         commit()
                     }
                     //this.supportFragmentManager?.commit {
@@ -49,14 +46,14 @@ class NavigationActivity() : AppCompatActivity(), ChangeBaraja {
                 }
                 R.id.image_salas -> {
                     this.supportFragmentManager?.commit {
-                        this.replace(R.id.fragment_container,salas_fragment())
+                        this.replace(R.id.fragment_container, salas_fragment())
                         this.addToBackStack(null)
                     }
                     true
                 }
                 R.id.image_ajuste -> {
                     this.supportFragmentManager?.commit {
-                        this.replace(R.id.fragment_container,ajustes_fragment())
+                        this.replace(R.id.fragment_container, ajustes_fragment())
                         this.addToBackStack(null)
                     }
                     true

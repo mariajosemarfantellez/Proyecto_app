@@ -1,4 +1,4 @@
-package com.example.proyecto
+package com.example.proyecto.todo_salas
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,6 +10,8 @@ import androidx.fragment.app.*
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.proyecto.OnClickListener
+import com.example.proyecto.R
 
 
 class salas_fragment : Fragment(), OnClickListener {
@@ -74,7 +76,7 @@ class salas_fragment : Fragment(), OnClickListener {
         if(item is Rooms){
             setFragmentResult("requestKey_1", bundleOf("name" to item.name, "password" to item.password, "position" to adapter.data.indexOf(item)) )
             activity?.supportFragmentManager?.commit {
-                this.replace(R.id.fragment_container,delete_rooms_fragment())
+                this.replace(R.id.fragment_container, delete_rooms_fragment())
                 this.addToBackStack(null)
             }
         }
