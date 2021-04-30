@@ -53,13 +53,9 @@ class barajas_fragment() : Fragment(), OnClickListener {
                 if(baraja == viewModel.T_Shirt){
                     return 3
                 }
-                else if(baraja == viewModel.Fibonacci){
+                else{
                     return 5
                 }
-                if (position % 3 == 0){
-                    return 4
-                }
-                return 4
             }
         })
         recyclerView.setLayoutManager(recyclerView.layoutManager)

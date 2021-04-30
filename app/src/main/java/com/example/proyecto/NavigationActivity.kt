@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Window
 import androidx.fragment.app.commit
+import androidx.navigation.fragment.findNavController
 import com.example.proyecto.todo_baraja_ajustes.ajustes_fragment
 import com.example.proyecto.todo_baraja_ajustes.barajas_fragment
 import com.example.proyecto.todo_salas.salas_fragment

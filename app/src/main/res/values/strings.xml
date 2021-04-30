@@ -18,7 +18,7 @@
     <string name="password_room">PASSWORD</string>
     <string name="save_room">SAVE</string>
     <string name="delete_room">DELETE</string>
-    <string name="invalid">INVALID NAME/EMAIL</string>
+    <string name="invalid">INVALID EMAIL/PASSWORD</string>
     <string-array name="deck_options">
         <item>DECKS</item>
         <item>Standard</item>
