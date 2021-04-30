@@ -26,7 +26,7 @@
             android:gravity="center"
             android:textColor="@color/fondo2"
             android:text="@string/baraja_view"
-            android:textSize="28sp">
+            android:textSize="23sp">
 
         </TextView>
 
