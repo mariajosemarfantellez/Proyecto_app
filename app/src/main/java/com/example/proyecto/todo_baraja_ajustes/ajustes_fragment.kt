@@ -28,9 +28,6 @@ class ajustes_fragment() : Fragment() {
 
         spinner?.onItemSelectedListener = object : OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>, view: View?, pos: Int, id: Long) {
-                if (pos != null){
-                    navigationActivity.change(pos)
-                }
                 if(pos!=0){
                     viewModel.posicion = pos
                     activity?.supportFragmentManager?.commit {

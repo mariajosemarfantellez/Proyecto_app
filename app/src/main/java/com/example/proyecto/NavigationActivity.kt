@@ -2,6 +2,7 @@ package com.example.proyecto
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Window
 import androidx.fragment.app.commit
 import com.example.proyecto.todo_baraja_ajustes.ajustes_fragment
 import com.example.proyecto.todo_baraja_ajustes.barajas_fragment
@@ -12,20 +13,20 @@ class NavigationActivity() : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        supportRequestWindowFeature(Window.FEATURE_NO_TITLE)
         setContentView(R.layout.activity_navigation)
-
-        supportFragmentManager.beginTransaction().apply{
-            replace(R.id.fragment_container, barajas_fragment())
-            commit()
+        this.supportFragmentManager?.commit {
+            this.replace(R.id.fragment_container, barajas_fragment())
+            this.addToBackStack(null)
         }
 
         val bottom = findViewById<BottomNavigationView>(R.id.bottom_navigation)
         bottom.setOnNavigationItemSelectedListener(BottomNavigationView.OnNavigationItemSelectedListener {
             when(it.itemId) {
                 R.id.image_baraja -> {
-                    supportFragmentManager.beginTransaction().apply{
-                        replace(R.id.fragment_container, barajas_fragment())
-                        commit()
+                    this.supportFragmentManager?.commit {
+                        this.replace(R.id.fragment_container, barajas_fragment())
+                        this.addToBackStack(null)
                     }
                     true
                 }

@@ -19,6 +19,9 @@ class RecycleViewAdapterBaraja(override val onClickListener: OnClickListener):
         fun bindView(item: String, position: Int){
             val number = view.findViewById<TextView>(R.id.text_baraja)
             number.text = item
+            /*if (position == data.size-1){
+                number.setCompoundDrawablesWithIntrinsicBounds(0,0,0,R.drawable.cafe)
+            }*/
             if(data.size % 3 == 1 ){
                 cambio_espacio_caso_1(position)
             }

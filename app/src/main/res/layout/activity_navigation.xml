@@ -20,10 +20,8 @@
         <TextView
             android:id="@+id/up"
             android:layout_width="match_parent"
-            android:layout_height="50dip"
-            android:layout_marginLeft="5px"
-            android:layout_marginRight="5px"
-            android:background="@color/fondo"
+            android:layout_height="50dp"
+            android:background="@color/fondo_up"
             android:gravity="start|center_vertical"
             android:text="@string/navigation_top"
             android:textColor="@color/fondo2">
@@ -46,9 +44,6 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_alignParentBottom="true"
-            android:layout_marginLeft="5px"
-            android:layout_marginRight="5px"
-            android:background="@color/fondo"
             android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -58,8 +53,9 @@
                 android:id="@+id/bottom_navigation"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:backgroundTint="@color/fondo"
+                app:backgroundTint="@color/fondo_up"
                 app:itemIconTint="@color/fondo2"
+                app:itemTextColor="@color/fondo2"
                 app:menu="@menu/bottom_navigation_menu" />
 
 

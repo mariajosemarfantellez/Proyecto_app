@@ -10,7 +10,7 @@
         android:layout_width="300dp"
         android:layout_height="300dp"
         android:layout_gravity="center"
-        android:background="@color/fondo_login">
+        android:background="@drawable/borde_color">
         <TextView
             android:id="@+id/text_detail_baraja"
             android:layout_gravity="center"

@@ -8,9 +8,9 @@
     <color name="black">#FF000000</color>
     <color name="gris">#D9B89E</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="fondo">#99EBAE</color>
+    <color name="fondo">#DBF5DF</color>
     <color name="login">#5440FF</color>
     <color name="fondo2">#004445</color>
-    <color name="fondo_login">#DBF5DF</color>
+    <color name="fondo_up">#99EBAE</color>
 
 </resources>
