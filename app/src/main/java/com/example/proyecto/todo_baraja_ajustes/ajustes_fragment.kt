@@ -22,8 +22,6 @@ class ajustes_fragment() : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_ajustes_fragment, container, false)
 
-        val navigationActivity = NavigationActivity()
-
         val spinner = view.findViewById<Spinner>(R.id.spinner)
 
         spinner?.onItemSelectedListener = object : OnItemSelectedListener {

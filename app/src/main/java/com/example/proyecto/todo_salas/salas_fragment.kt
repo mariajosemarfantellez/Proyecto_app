@@ -50,8 +50,7 @@ class salas_fragment : Fragment(), OnClickListener {
             val name = bundle.getString("name")
             val password = bundle.getString("password")
             viewModel.rooms.add(Rooms(name,password))
-            viewModel.Escritura(viewModel.rooms,"room_18.txt")
-
+            viewModel.Escritura(viewModel.rooms,"room_final.txt")
         }
 
         return view

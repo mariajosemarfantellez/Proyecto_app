@@ -17,9 +17,9 @@ class SalasViewModel(application: Application) : AndroidViewModel(application) {
         rooms.add(Rooms("Devops Team","5678"))
         rooms.add(Rooms("Another Project","1010"))
         rooms.add(Rooms("Super Team","0000"))
-        Escritura(rooms,"room_18.txt")*/
+        Escritura(rooms,"room_final.txt")*/
 
-        rooms = Leer(contexto, "room_18.txt")
+        rooms = Leer(contexto, "room_final.txt")
         myCases.postValue(rooms)
 
 

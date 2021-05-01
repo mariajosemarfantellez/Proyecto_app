@@ -62,8 +62,6 @@ class barajas_fragment() : Fragment(), OnClickListener {
         for(i in baraja){
             adapter.addItem(i)
         }
-
-
         return view
     }
     override fun onClickItem(item: Any) {
