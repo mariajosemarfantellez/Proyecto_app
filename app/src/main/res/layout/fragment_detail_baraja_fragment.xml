@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".todo_baraja_ajustes.detail_baraja_fragment">
 
-    <LinearLayout
+    <RelativeLayout
         android:id="@+id/linear_detail_baraja"
         android:layout_width="300dp"
         android:layout_height="300dp"
         android:layout_gravity="center"
+        android:orientation="horizontal"
         android:background="@drawable/borde_color">
+
         <TextView
             android:id="@+id/text_detail_baraja"
             android:layout_gravity="center"
@@ -21,5 +24,13 @@
             android:textSize="50sp">
 
         </TextView>
-    </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible"
+            android:src="@drawable/ic_baseline_local_cafe_24" />
+
+    </RelativeLayout>
 </FrameLayout>
