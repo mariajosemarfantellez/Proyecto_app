@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/crear_salas_fragment">
+
+    <fragment
+        android:id="@+id/ajustes_fragment"
+        android:name="com.example.proyecto.todo_baraja_ajustes.ajustes_fragment"
+        android:label="fragment_ajustes_fragment"
+        tools:layout="@layout/fragment_ajustes_fragment" />
+    <fragment
+        android:id="@+id/barajas_fragment"
+        android:name="com.example.proyecto.todo_baraja_ajustes.barajas_fragment"
+        android:label="fragment_barajas_fragment"
+        tools:layout="@layout/fragment_barajas_fragment" >
+        <action
+            android:id="@+id/action_barajas_fragment_to_ajustes_fragment"
+            app:destination="@id/ajustes_fragment" />
+        <action
+            android:id="@+id/action_barajas_fragment_to_crear_salas_fragment"
+            app:destination="@id/crear_salas_fragment" />
+        <action
+            android:id="@+id/action_barajas_fragment_to_salas_fragment"
+            app:destination="@id/salas_fragment" />
+        <action
+            android:id="@+id/action_barajas_fragment_to_detail_baraja_fragment"
+            app:destination="@id/detail_baraja_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/crear_salas_fragment"
+        android:name="com.example.proyecto.todo_salas.crear_salas_fragment"
+        android:label="fragment_crear_salas_fragment"
+        tools:layout="@layout/fragment_crear_salas_fragment" />
+    <fragment
+        android:id="@+id/salas_fragment"
+        android:name="com.example.proyecto.todo_salas.salas_fragment"
+        android:label="fragment_salas_fragment"
+        tools:layout="@layout/fragment_salas_fragment" >
+        <action
+            android:id="@+id/action_salas_fragment_to_delete_rooms_fragment"
+            app:destination="@id/delete_rooms_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/delete_rooms_fragment"
+        android:name="com.example.proyecto.todo_salas.delete_rooms_fragment"
+        android:label="fragment_delete_rooms_fragment"
+        tools:layout="@layout/fragment_delete_rooms_fragment" />
+    <fragment
+        android:id="@+id/detail_baraja_fragment"
+        android:name="com.example.proyecto.todo_baraja_ajustes.detail_baraja_fragment"
+        android:label="fragment_detail_baraja_fragment"
+        tools:layout="@layout/fragment_detail_baraja_fragment" />
+</navigation>
